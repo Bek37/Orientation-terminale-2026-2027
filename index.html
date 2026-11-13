@@ -1,0 +1,488 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Après le bac — Fiche orientation Terminale 2027</title>
+
+<style>
+  :root {
+    --navy: #17344d;
+    --teal: #087e79;
+    --blue: #3478b9;
+    --orange: #c96b35;
+    --purple: #7654a5;
+    --green: #52845c;
+    --ink: #263746;
+    --muted: #536574;
+    --line: #dce6e9;
+    --pale: #f3f7f8;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    padding: 24px;
+    background: #eaf0f2;
+    color: var(--ink);
+    font: 16px/1.45 Arial, Helvetica, sans-serif;
+  }
+
+  .page {
+    width: min(100%, 900px);
+    margin: 0 auto;
+    padding: 34px;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 8px 28px #17344d18;
+  }
+
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 18px;
+  }
+
+  .eyebrow {
+    color: var(--teal);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+  }
+
+  h1 {
+    margin: 6px 0 5px;
+    color: var(--navy);
+    font-size: clamp(18px, 3.1vw, 28px);
+    line-height: 1.1;
+    white-space: nowrap;
+  }
+
+  .subtitle {
+    margin: 0;
+    color: var(--muted);
+  }
+
+  .year {
+    flex: 0 0 auto;
+    padding: 12px 16px;
+    border-radius: 12px;
+    background: var(--navy);
+    color: #fff;
+    text-align: center;
+    font-weight: 700;
+  }
+
+  .core {
+    margin: 0 0 22px;
+    padding: 15px 18px;
+    border-radius: 14px;
+    background: linear-gradient(105deg, var(--navy), var(--teal));
+    color: white;
+    text-align: center;
+  }
+
+  .core strong {
+    display: block;
+    font-size: 19px;
+  }
+
+  .core span { font-size: 14px; }
+
+  h2.section-title {
+    margin: 20px 0 10px;
+    color: var(--navy);
+    font-size: 15px;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .card {
+    padding: 15px 16px;
+    border: 1px solid var(--line);
+    border-top: 5px solid var(--teal);
+    border-radius: 12px;
+    background: var(--pale);
+    break-inside: avoid;
+  }
+
+  .card.blue { border-top-color: var(--blue); }
+  .card.orange { border-top-color: var(--orange); }
+  .card.purple { border-top-color: var(--purple); }
+  .card.green { border-top-color: var(--green); }
+
+  .card h3 {
+    margin: 0 0 7px;
+    color: var(--navy);
+    font-size: 17px;
+  }
+
+  .card p { margin: 5px 0; }
+
+  ul {
+    margin: 6px 0 0;
+    padding-left: 20px;
+  }
+
+  li { margin: 4px 0; }
+
+  a {
+    color: #075e8c;
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  .label {
+    display: inline-block;
+    margin-top: 6px;
+    padding: 3px 8px;
+    border-radius: 20px;
+    background: #e1efed;
+    color: #155f5a;
+    font-size: 12px;
+    font-weight: 700;
+  }
+
+  .calendar {
+    padding: 16px;
+    border-radius: 14px;
+    background: #f0f5f7;
+  }
+
+  .calendar h2.section-title { margin-top: 0; }
+
+  .events {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 9px;
+  }
+
+  .event {
+    display: grid;
+    grid-template-columns: 112px 1fr;
+    gap: 10px;
+    align-items: start;
+    padding: 11px 12px;
+    border-left: 5px solid var(--teal);
+    border-radius: 8px;
+    background: #fff;
+  }
+
+  .event:nth-child(2) { border-left-color: var(--blue); }
+  .event:nth-child(3) { border-left-color: var(--orange); }
+  .event:nth-child(4) { border-left-color: var(--purple); }
+  .event:nth-child(5) { border-left-color: var(--green); }
+  .event:nth-child(6) { border-left-color: var(--teal); }
+
+  .date {
+    color: var(--navy);
+    font-weight: 700;
+  }
+
+  .event p { margin: 0; }
+
+  .note {
+    margin-top: 14px;
+    padding: 13px 15px;
+    border-left: 5px solid #e2a03d;
+    border-radius: 8px;
+    background: #fff7e9;
+    font-size: 14px;
+  }
+
+  .closing {
+    margin-top: 12px;
+    padding: 12px;
+    border-radius: 10px;
+    background: #edf5f4;
+    color: var(--navy);
+    text-align: center;
+    font-weight: 700;
+  }
+
+  .customize {
+    margin: 10px 0 0;
+    color: var(--muted);
+    text-align: right;
+    font-size: 12px;
+  }
+
+  @media (max-width: 680px) {
+    body { padding: 0; }
+    .page { padding: 22px 16px; border-radius: 0; }
+    header { align-items: flex-start; }
+    h1 {
+      font-size: clamp(8px, calc((100vw - 110px) / 23), 22px);
+    }
+    .cards, .events { grid-template-columns: 1fr; }
+    .event { grid-template-columns: 100px 1fr; }
+    .year { padding: 9px 11px; font-size: 14px; }
+  }
+
+  @media print {
+    @page { size: A4 portrait; margin: 8mm; }
+
+    body {
+      padding: 0;
+      background: #fff;
+      font-size: 8.3pt;
+      line-height: 1.22;
+    }
+
+    .page {
+      width: auto;
+      height: 281mm;
+      margin: 0;
+      padding: 0;
+      border-radius: 0;
+      box-shadow: none;
+      overflow: hidden;
+    }
+
+    header { margin-bottom: 3mm; gap: 5mm; }
+    .eyebrow { font-size: 7.5pt; }
+    h1 { margin: 1mm 0; font-size: 15pt; }
+    .subtitle { font-size: 8.5pt; }
+    .year { padding: 2.5mm 4mm; font-size: 9pt; }
+
+    .core {
+      margin-bottom: 3mm;
+      padding: 2.5mm;
+      border-radius: 2mm;
+    }
+
+    .core strong { font-size: 12pt; }
+    .core span { font-size: 8pt; }
+
+    h2.section-title {
+      margin: 3mm 0 1.5mm;
+      font-size: 8.5pt;
+    }
+
+    .cards { gap: 2mm; }
+
+    .card {
+      padding: 2.2mm 2.5mm;
+      border-radius: 2mm;
+      font-size: 7.7pt;
+    }
+
+    .card h3 {
+      margin-bottom: 1mm;
+      font-size: 9pt;
+    }
+
+    .card p { margin: .7mm 0; }
+    ul { margin-top: .7mm; padding-left: 4mm; }
+    li { margin: .5mm 0; }
+    .label { margin-top: 1mm; padding: .5mm 1.3mm; font-size: 7pt; }
+
+    .calendar {
+      margin-top: 3mm;
+      padding: 2.5mm;
+      border-radius: 2mm;
+    }
+
+    .calendar h2.section-title { margin-top: 0; }
+    .events { gap: 1.5mm; }
+
+    .event {
+      grid-template-columns: 25mm 1fr;
+      gap: 1.5mm;
+      padding: 1.5mm 1.7mm;
+      border-left-width: 1mm;
+      border-radius: 1mm;
+      font-size: 7.4pt;
+    }
+
+    .date { font-size: 7.5pt; }
+
+    .note {
+      margin-top: 2mm;
+      padding: 1.8mm 2.3mm;
+      border-left-width: 1mm;
+      font-size: 7.3pt;
+    }
+
+    .closing {
+      margin-top: 1.5mm;
+      padding: 1.8mm;
+      font-size: 8pt;
+    }
+
+    .customize { margin-top: 1mm; font-size: 7pt; }
+    a { color: #075e8c; }
+  }
+</style>
+</head>
+
+<body>
+<main class="page">
+
+  <header>
+    <div>
+      <div class="eyebrow">Repères pour les élèves de terminale</div>
+      <h1>🌱 Après le bac, je construis mon chemin</h1>
+      <p class="subtitle">Explorer, comparer, poser ses questions : pas besoin d’avoir tout décidé aujourd’hui.</p>
+    </div>
+    <div class="year">PARCOURSUP<br>2027</div>
+  </header>
+
+  <div class="core">
+    <strong>MON ORIENTATION</strong>
+    <span>Une prochaine étape qui me correspond — plusieurs chemins sont possibles.</span>
+  </div>
+
+  <h2 class="section-title">Choisis la porte d’entrée qui te ressemble</h2>
+
+  <section class="cards">
+
+    <article class="card">
+      <h3>✨ Je n’ai pas encore d’idée</h3>
+      <p>Explore tes intérêts, les métiers et les formations, sans chercher tout de suite le choix parfait.</p>
+      <ul>
+        <li><a href="https://app.avenirs.onisep.fr/"
+               target="_blank" rel="noopener noreferrer">Avenir(s)</a> — outils et ressources d’orientation. Connexion avec EduConnect ou Educagri.</li>
+        <li><a href="https://thotismedia.com/postbac/"
+               target="_blank" rel="noopener noreferrer">Thotis Post Bac</a> — test d’orientation, guides, témoignages et immersions.</li>
+        <li><a href="https://www.onisep.fr/metier/des-metiers-selon-mes-gouts"
+               target="_blank" rel="noopener noreferrer">Métiers selon mes goûts — Onisep</a>.</li>
+      </ul>
+      <span class="label">Avenir(s) : plateforme de l’Onisep</span>
+    </article>
+
+    <article class="card blue">
+      <h3>🧭 J’ai une idée de métier</h3>
+      <p>Découvre les parcours d’études qui peuvent y mener.</p>
+      <ul>
+        <li><a href="https://www.onisep.fr/metier"
+               target="_blank" rel="noopener noreferrer">Fiches métiers — Onisep</a>.</li>
+        <li><a href="https://thotismedia.com/metiers/"
+               target="_blank" rel="noopener noreferrer">Thotis Métiers</a> — métiers, témoignages et immersions.</li>
+        <li><a href="https://www.onisep.fr/orientation/monprojetsup-bien-preparer-son-orientation-post-bac"
+               target="_blank" rel="noopener noreferrer">MonProjetSup — outil d’orientation post-bac de l’Onisep</a> — conçu pour les élèves de la seconde à la terminale, il suggère des formations à explorer selon le profil et les préférences renseignés. <a href="https://app.avenirs.onisep.fr/"
+               target="_blank" rel="noopener noreferrer">Accéder à Avenir(s)</a> pour retrouver la plateforme.</li>
+      </ul>
+    </article>
+
+    <article class="card orange">
+      <h3>⚖️ J’hésite entre des formations</h3>
+      <p>Compare les programmes, attendus, frais, débouchés et lieux d’études.</p>
+      <ul>
+        <li><a href="https://thotismedia.com/postbac/"
+               target="_blank" rel="noopener noreferrer">Thotis Post Bac</a> — guides et témoignages pour explorer les filières.</li>
+        <li><a href="https://www.parcoursup.gouv.fr/trouver-une-formation/quelles-formations-sont-accessibles-sur-parcoursup-1318"
+               target="_blank" rel="noopener noreferrer">Parcoursup : rechercher et comprendre les formations</a>.</li>
+      </ul>
+    </article>
+
+    <article class="card purple">
+      <h3>🎥 Je veux voir les études en vrai</h3>
+      <p>Les témoignages rendent un parcours plus concret et aident à préparer ses questions.</p>
+      <ul>
+        <li><a href="https://thotismedia.com/postbac/"
+               target="_blank" rel="noopener noreferrer">Thotis Post Bac</a> — témoignages étudiants, vidéos et immersions.</li>
+        <li><a href="https://app.avenirs.onisep.fr/"
+               target="_blank" rel="noopener noreferrer">Avenir(s)</a> — ressources sur les formations et métiers.</li>
+      </ul>
+    </article>
+
+    <article class="card green">
+      <h3>🛠️ L’alternance m’intéresse</h3>
+      <p>Repère des formations et des entreprises, puis prends contact.</p>
+      <ul>
+        <li><a href="https://labonnealternance.apprentissage.beta.gouv.fr/"
+               target="_blank" rel="noopener noreferrer">La bonne alternance</a> — recherche d’offres, d’entreprises et de formations.</li>
+        <li><a href="https://www.parcoursup.gouv.fr/cartes-des-formations-3471"
+               target="_blank" rel="noopener noreferrer">Carte des formations Parcoursup</a>.</li>
+      </ul>
+    </article>
+
+    <article class="card">
+      <h3>💬 J’ai besoin d’en parler</h3>
+      <p>Échange avec ton professeur principal, un PsyEN ou un conseiller.</p>
+      <ul>
+        <li><a href="https://www.onisep.fr/mon-orientation-en-ligne"
+               target="_blank" rel="noopener noreferrer">Mon orientation en ligne</a> — service gratuit de conseillers Onisep.</li>
+        <li><a href="https://www.onisep.fr/mon-orientation-en-ligne/posez-votre-question-par-tchat"
+               target="_blank" rel="noopener noreferrer">Poser une question par tchat</a>.</li>
+        <li><a href="https://www.onisep.fr/mon-orientation-en-ligne/posez-votre-question-par-telephone"
+               target="_blank" rel="noopener noreferrer">Contacter un conseiller par téléphone</a>.</li>
+      </ul>
+    </article>
+
+  </section>
+
+  <section class="calendar">
+    <h2 class="section-title">
+      🗓️ <a href="https://www.parcoursup.gouv.fr/calendrier"
+             target="_blank" rel="noopener noreferrer">Calendrier officiel Parcoursup 2027</a>
+    </h2>
+
+    <div class="events">
+
+      <div class="event">
+        <div class="date">Oct. 2026<br>→ janv. 2027</div>
+        <p>Je prépare mon projet et explore les formations.</p>
+      </div>
+
+      <div class="event">
+        <div class="date">17 décembre<br>2026</div>
+        <p>Ouverture de la carte des formations Parcoursup 2027.</p>
+      </div>
+
+      <div class="event">
+        <div class="date">18 janvier<br>→ 11 mars 2027</div>
+        <p>Je crée mon dossier et formule jusqu’à 10 vœux, plus 10 vœux supplémentaires en apprentissage.</p>
+      </div>
+
+      <div class="event">
+        <div class="date">1ᵉʳ avril<br>2027</div>
+        <p>Dernier jour pour compléter mon dossier et confirmer mes vœux.</p>
+      </div>
+
+      <div class="event">
+        <div class="date">1ᵉʳ juin<br>→ 10 juillet 2027</div>
+        <p>Phase principale : je consulte les réponses et respecte les délais indiqués dans mon dossier. Du 4 au 7 juin, je classe les vœux en attente que je souhaite conserver.</p>
+      </div>
+
+      <div class="event">
+        <div class="date">Dès le 10 juin<br>2027</div>
+        <p>Début de la phase complémentaire. Dernier jour pour recevoir une proposition : 9 septembre 2027.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <aside class="note">
+    <strong>Repère sur les statuts :</strong>
+    Parcoursup est la plateforme nationale publique. Thotis est un média indépendant qui indique être conventionné avec des ministères ; une convention ne vaut pas agrément général de ses contenus. Pour vérifier les caractéristiques et labels, consulte la fiche de la formation concernée sur
+    <a href="https://www.parcoursup.gouv.fr/trouver-une-formation/quelles-formations-sont-accessibles-sur-parcoursup-1318"
+       target="_blank" rel="noopener noreferrer">Parcoursup</a>.
+    <a href="https://thotismedia.com/partenaires/"
+       target="_blank" rel="noopener noreferrer">Thotis explique ses conventions et partenariats.</a>
+  </aside>
+
+  <div class="closing">
+    🌿 Un témoignage ouvre des pistes ; une fiche officielle aide à vérifier. <br> Je peux avancer pas à pas et faire évoluer mon projet.
+   </div>
+
+  <p class="customize">
+    Terminale 708 — Professeurs principaux : Cristina Caudron Martinez et Bertrand Kieffer /
+    Lycée Jean Monnet — Année 2026-2027
+  </p>
+
+</main>
+</body>
+</html>
